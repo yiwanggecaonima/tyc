@@ -1,3 +1,4 @@
+# 城市为单位 遍历关键字
 import json
 import random
 import multiprocessing
@@ -114,7 +115,7 @@ class Tianyancha():
             self.parse(city_link)
         return self.driver
 
-    def parse(self,link):
+    def parse(self,link):  # 常规解析 xpath
         self.driver.get(link)
         html = self.driver.page_source
         time.sleep(1)
